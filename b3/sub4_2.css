@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0;}
+body, html {width: 100%; margin: 0 auto; font-family: 'Noto Sans KR', sans-serif; background-color: #ffffff;  }
+ul {list-style: none;}
+a {text-decoration: none; color: #333;}
+img {border: 0;}
+wrap {width: 100%;}
+
+/*헤드 랑 메뉴*/
+.hd {height: 100px; width: 100%; margin: 0 auto;}
+.hd_logo {width: 315px; margin: 0 auto;}
+
+nav {width: 100%; border-top:2px solid #c81d23 ;}
+#gnb {width: 1200px; height: 50px; margin-top: 10px; margin: 0 auto;}
+#gnb li {float: left; width: 300px; height: 50px; position:relative;}
+#gnb li a {display: block; width: 300px; height: 50px; line-height: 50px; text-align: center; font-size: 15px;}
+#gnb li a.mm {font-weight: bold;}
+#gnb li .sub {width: 300px; height: 300px; background-color: rgba(255,255,255,0.5);position: absolute; z-index: 500;visibility: hidden; opacity: 0; transition: 0.6s ; }
+#gnb li .sub li {margin-top: 8px;}
+#gnb:hover li .sub {visibility: visible; opacity: 1;}
+#gnb li:hover a.mm {background: rgba(200,29,35,0.5); }
+#gnb a:hover {background: rgba(200,29,35,0.5); }
+#gnb .sub li.mm:hover {background: rgba(200,29,35,0.5);}
+
+
+.main_ban img {width: 100%; opacity: 0.5; height: 300px;}
+
+.main_ban {width: 100%; margin: 0 auto; }
+
+.sub_wrap {width: 1200px; margin: 0 auto; height: 100px; }
+.sub_menu {width: 380px; margin: 0 auto;}
+.sub_menu li{float: left;width: 160px; height: 50px; background: #dddddd;
+   margin: 0px 14px; text-align: center; line-height: 50px; }
+
+.sub_menu li a {font-size: 16px; color: #555555;}
+.sub_menu li.sub_cheeck {background-color: #fff; width: 160px; height: 50px; border: 2px solid #c81d23; color: black; font-weight: bold;}
+.main_box {width: 1200px; margin: 0 auto;}
+.main_box h3.main_t{text-align: left; border-bottom: 2px solid #f4f4f4; font-size: 30px; height: 50px; margin-bottom: 50px;}
+/*푸터*/
+#ft_wrap{clear: both; background: #f4f4f4; color: black; height: 150px; }
+.ft {width: 1400px; margin: 0 auto; margin-top: 50px;}
+/*여기까지서브공통*/
+
+
+hd { background:#eee; }    
+.con::after { content:""; display:table; clear:both; }  
+
+.lst { clear: both; width: 1200px; margin:0 auto; }    
+.lst li { float:left; width:280px; padding:10px; } 
+.lst li a { display:block; color:#333; }  
+.tit { line-height: 3.6; text-indent:14px; }
+.com { padding:14px; overflow:hidden; white-space: nowrap; text-overflow:ellipsis; height:40px; }
