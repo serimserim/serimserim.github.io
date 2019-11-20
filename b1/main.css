@@ -1,0 +1,343 @@
+ * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button,
+        a,
+        input {
+            border: 0;
+            outline: 0;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100%;
+        }
+
+        .page {
+            clear: both;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .page_wrap {
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+        #tnb {
+            width: 100%;
+            height: 42px;
+            background: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 60;
+        }
+
+        .right.menu {
+            float: right;
+            margin-right: 120px;
+        }
+
+        #tnb li {
+            float: left;
+            margin-left: 25px;
+        }
+
+        #tnb li a {
+            display: block;
+            color: aliceblue;
+            line-height: 45px;
+            font-size: 15px;
+        }
+         #tnb li a:hover { 
+                            color:#fe3c08;
+                            }
+
+        .lst_btn {
+            display: block;
+            width: 57px;
+            height: 51px;
+            background-image: url("taeanmenu1.png");
+            background-repeat: no-repeat;
+            position: fixed;
+            top: 120px;
+            left: 150px;
+            z-index: 90;
+            text-indent: -9999px;
+            cursor: pointer;
+        }
+
+        #gnb {
+            position: fixed;
+            top: 0;
+            left: -510px;
+            z-index: 99;
+            width: 500px;
+            height: 100%;
+            background-color: #fff;
+            transition: 0.4s;
+        }
+
+        #ck1:checked~#gnb {
+            left: 0;
+        }
+
+        #ck1 {
+            display: none;
+        }
+
+        .main {
+            padding-top: 30%;
+        }
+
+        .main li a {
+            color: #082d7f;
+            padding: 5% 0;
+            display: block;
+            font-size: 30px;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .m2 {
+            text-align: center;
+            width: 300px;
+            margin: 150px auto
+        }
+
+        .m2 li {
+            display: inline-block;
+            float: left;
+            width: 50%;
+        }
+
+        .m2 li a {
+            color: #082d7f;
+            padding-top: 10%;
+            font-size: 18px;
+        }
+        
+
+        #vdo {
+            width: 100%;
+            height: 100%;
+        }
+
+        #vd1 {
+            display: block;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        #cover_page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            top: 0;
+            left: 0;
+        }
+
+        .tit {
+            border-image: url("");
+            width: 700px;
+            margin: 80px auto;
+            padding-top: 10%;
+            
+        }
+
+        #frm1 {
+            width: 787px;
+            height: 78px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #keyword {
+            display: block;
+            height: 68px;
+            width: 700px;
+            text-indent: 25px;
+            margin: 5px 0px 5px 5px;
+            float: left;
+            opacity: 0.5;
+            transition: 0.5s;
+            
+        }
+
+        #search {
+            display: block;
+            width: 75px;
+            height: 68px;
+            float: left;
+            margin: 5px 5px 5px 0px;
+            background-color: rgba(255, 255, 255, 0.5);
+            background-image: url("serach1.png");
+            text-indent: -9999px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .close_btn {
+            display: block;
+            margin: 40px 400px;
+
+            width: 36px;
+            height: 36px;
+
+        }
+
+
+        #keyword :focus {
+            opacity: 1;
+            width: 800;
+        }
+
+        #keyword :focus - #search {
+            opacity: 1;
+        }
+
+        #page2, #page3 {
+            background-image: url("./main_back.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #page2 {background-attachment: fiexed; 
+                padding-top: 40px;
+                }
+        
+        /**이거 뭔지 모르겠음**/
+        #insight {background-color: #f0f0f0;
+                  height: 95%;
+                }
+        
+        .page_tit  {text-align: center; 
+                    line-height: 100px;
+                    font-size: 45px;}
+        
+        .thum_lst li {
+                        float: left;
+                        width: 373px;
+                        margin-left: 40px;
+                        position: relative;
+                        overflow: hidden; 
+                        height: 320px;
+                        margin-top: 40px;
+        }
+        
+        .thum_lst li.col8 {
+                            width: 786px;
+                            }
+        .thum_lst li a {color: #333;
+                        display: block;
+                        width: 360px;
+                        height: 300px;
+                        overflow: hidden;
+                        border: 3px solid transparent;
+                        margin: 7px auto;
+                        transition: 0.6s;
+                        transition-delay: 0.1s;
+                        background-color: #e1e1e1;
+                        }
+        .thum_lst li a:hover {border: 3px solid darkblue;
+                                background-color: #fff
+                            }
+    
+        
+        .cate_tit { padding: 14px; color: #fe3c08; text-decoration: underline;}
+        
+        .lst_tit {padding: 14px;}
+        
+        .lst_com {padding: 14px;}
+        
+        .lst_date {padding: 14px;}
+        
+        .thum_lst li.col8 a {width: 770px; color: #fff; background-image: url(); background-size: cover;}
+        
+         #vs_con { padding-top: 50px; }    
+        
+        #vs {
+            width: 100%; 
+            overflow-x: hidden; 
+            background-color: #fff;
+            padding-top: 50px;
+            position: relative;
+            }
+        
+        .img_box {width: 400%;}
+        
+        .img_box li {
+                    float: left; 
+                    }
+        .img_box li .pic {display: block; width: 580px; float: left; margin-left: 40px; margin-bottom: 40px;}
+        
+        .img_box li .tit_box {width: 580px; float: right; margin-right: 40px; margin-bottom: 40px;}
+        
+        .vs_tit {padding: 24px;}
+        
+        .vs_com {padding: 24px;}        
+
+        .more {display: block; width: 120px; height: 40px; border:2px solid #333
+                color: #333; text-align: center; line-height: 40px; margin: 24px;}
+        
+    
+        .btn_box {position: absolute; right: 100px; bottom: 50px; z-index: 50; width: 500px; height: 14px;}
+        
+        .btn_box li {width: 150px; margin-left: 12px; float: left;}
+        
+        .btn_box li button {display: block; width: 150px; height: 14px; background-color: #666;}
+        
+        .btn_box li.on button {background-color: #fe3c08;}
+        
+        .ico_link {clear:both; margin-top: 50px; width: 100%; height: 100px; background: #fff;}
+        
+        .ico_link li { float:left; width: 25%; height: 100px; }   
+        
+        .ico_link li a { display:block; color:#333; font-size:22px; line-height: 64px; text-align: center; background:#fff; padding-left: 100px; }  
+        
+        .ico_link li a.item2 { background:#f0f0f0; }  
+        
+        .ico_link li a span { display:block; float:left; padding-left: 15px;  }    
+        
+        .ico_link li a .ico { background-repeat: no-repeat;
+            background-image:url("./data/main_sprite_pannel.png"); margin-top: 5px; }
+        
+        .ico_link li a.item1 .ico { background-position:; width:; height:; }    
+        
+        .ico_link li a.item2 .ico { background-position:; width:; height:; } 
+        
+        .ico_link li a.item3 .ico { background-position:; width:; height:; } 
+        
+        .ico_link li a.item4 .ico { background-position:; width:; height:; } 
+        
+        
+        #ft { height: 100px; background-color: midnightblue;}
+        
+        .fnb { float:left; margin-left: 20px;  }
+        
+        .fnb li { float:left; padding:10px; }  
+        
+        .fnb li a { color:white; display:block; line-height:78px; } 
+        
+        .copyright { color: white; float:right; line-height: 100px; padding-right: 24px; }
+           

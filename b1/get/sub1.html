@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>어디로 갈까?</title>
+    <meta name="title" content="태안의 바다관광">
+    <meta name="keywords" content="태안바다">
+    <meta name="description" content="태안에 대표관광지라 할수있는 바다를 바탕으로 관광도움, 설명">
+    <meta property="og:title" content="">
+    <meta property="og:decrption" content="">
+    <meta property="og:image" contnet="">
+
+   
+    <link href="./date/farvicon_16x16.ico" type="image/x-icon" rel="shortcut icon">
+    <link rel="icon" type="image/png" size="32x32" href="taean1.png">
+    <link rel="shortcut icon" type="image/x-icon" href="taean1.png">
+    <link rel="apple-thouch-icon" sizes="180x180" href="taean1.png">
+    <link rel="shortcut icon" type="image/png" sizes="180x180" href="taean1.png">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+    <style>
+        
+    * {margin: 0; padding: 0; box-sizing: border-box}
+        
+    body,html {width: 100%; height: 100%;font-family: 'Nanum Gothic', sans-serif;}
+        
+     a {text-decoration: none;}
+
+    ul {list-style: none;}
+
+    button,a,input {border: 0;outline: 0;}
+
+    .wrap {width: 100%; height: 100%;}
+
+    .page { clear: both; width: 100%; height: 100%; position: relative;}
+
+    .page_wrap { width: 1280px;  margin: 0 auto; }
+
+    #tnb {width: 100%;height: 42px;background: rgba(0, 0, 0, 0.2);position: absolute;top: 0;left: 0;z-index: 60;    }
+
+    .right.menu {float: right;margin-right: 120px;  }
+
+    #tnb li {float: left;margin-left: 25px;    }
+
+    #tnb li a {display: block;color: aliceblue;line-height: 45px;font-size: 15px;}
+        
+    #tnb li a:hover {  color:#fe3c08;  }
+
+    .lst_btn {display: block;width: 57px;height: 51px;background-image: url("taeanmenu1.png");background-repeat: no-repeat;
+                position: fixed;top: 120px;left: 150px;z-index: 90;text-indent: -9999px;cursor: pointer;}
+        
+    .close_btn { display: block; margin: 40px 400px; width: 36px; height: 36px;}
+        
+    #gnb {position: fixed;top: 0;left: -510px;z-index: 99;width: 500px;height: 100%;
+            background-color: #082d7f; transition: 0.4s; }
+
+    #ck1:checked~#gnb { left: 0; }
+
+    #ck1 {display: none; }
+
+    .main { padding-top: 30%;}
+
+    .main li a { color: white; padding: 5% 0; display: block; font-size: 30px; font-weight: normal; text-align: center;}
+
+    .m2 { text-align: center;   width: 300px; margin: 150px auto    }
+
+    .m2 li {display: inline-block;float: left;width: 50%;    }
+
+    .m2 li a { color: wheat; padding-top: 10%;  font-size: 18px; }
+        
+        
+        
+    .tb_box { position: absolute; bottom:6px; left:50%;  margin-left:-636px;  
+    width: 1280px; background:#0e3691; margin-bottom: 14px;}    
+        
+    .cate_box { width:100vw; height:40vh; 
+        background-image:url("menutop.jpg"); background-size:contain; background-repeat: no-repeat; position:fixed; left: 0; top: 0; z-index:80; } 
+        
+        
+    .tb_box li { float:left; width: 400px; background:#5c8af2; border-right:1px solid #000; border-left:1px solid #777; margin-left: 20px;}
+        
+    .tb_box li a { color:#fff; display:block; text-align: center; line-height: 52px; }    
+        
+    body, html { overflow-y:auto; }    
+        
+    .box { width: 100vw; height: 40vh; margin:0 auto; overflow:hidden;
+        text-align:center;  }    
+        
+    .page { width: 100vw; height:auto; position:relative; }
+        
+    .page_wrap { width: 1280px; height:auto; max-height: 100vh; margin:0 auto; }   
+        
+    .page_tit { text-align: center; line-height:6; }  
+        
+    .page .page_wrap { display:none; } 
+        
+    .page:target .page_wrap {display:block; } 
+  
+    #ft { height: 100px; background-color: midnightblue;}
+        
+    .fnb { float:left; margin-left: 20px;  }
+
+    .fnb li { float:left; padding:10px; }  
+        
+    .fnb li a { color:white; display:block; line-height:78px; } 
+        
+    .copyright { color: white; float:right; line-height: 100px; padding-right: 24px; }
+        
+
+    </style>
+</head>
+<body>
+   <div class="wrap" id="sub1">
+    <div class="box">
+            <img src="" alt="바다이미지">
+        </div>
+    <div class="wrap">
+        <nav id="tnb">
+           <ul class="right menu">
+                <li><a href="sub1.html#page1">고객센터</a></li>
+            </ul>
+       </nav>
+        <input type="checkbox" id="ck1">
+        <label for="ck1" class="lst_btn">ㅇ</label>
+        <nav id="gnb">
+            <label for="ck1" class="close_btn"><img src="exit-right-arrow.png" alt="닫기"></label>
+            <ul class="main">
+                <li><a href="sub1.html">어디로 갈까?</a></li>
+                <li><a href="sub2.html">무엇을 먹을까?</a></li>
+                <li><a href="sub3.html">무슨 축제 중일까?</a></li>
+                <li><a href="sub4.html">어디서 잘까?</a></li>
+            </ul>
+            <ul class="m2">
+                <li><a href="license.html#page2">공지사항</a></li>
+                <li><a href="license.html#page3">Q&#38;A</a></li>
+            </ul>
+        </nav>
+        <div class="cate_box">
+            <!-- 배경 이미지 -->
+            <ul class="tb_box">
+                <li><a href="#page1">해수욕장</a></li>
+                <li><a href="#page2">갯벌</a></li>
+                <li><a href="#page3">항구</a></li>
+            </ul>
+        </div>
+        <div class="page" id="page1">
+            <section class="page_wrap">
+                <h2 class="page_tit">해수욕장</h2>
+                         <img src="" alt="" class="page_pic">
+                    <img src="./see/ahdtksvh.jpg" alt="몽산포 해수욕장">
+                <img src="" alt="" class="page_pic">
+                    <img src="./see/ahdtksvh.jpg" alt="몽산포 해수욕장">
+            </section>
+        </div>
+        <div class="page" id="page2">
+            <section class="page_wrap">
+                <h2 class="page_tit">갯벌</h2>
+                <img src="" alt="" class="page_pic">
+                <p class="page_con"></p>
+            </section>
+        </div>
+        <div class="page" id="page3">
+            <section class="page_wrap" id="vs_con">
+                <h2 class="page_tit">항구</h2>
+                <img src="" alt="" class="page_pic">
+                <p class="page_con"></p>
+            </section>
+         <footer id="ft">
+            <ul class="fnb">
+               <li><a href="">찾아오시는길</a></li>
+               <li><a href="">개인정보처리방침</a></li>
+               <p class="copyright">Copyright © 2019 Taean-gun. All Rights Reserved.</p>
+           </ul>
+        </footer>
+    </div>
+       </div>
+</body>
+</html>
