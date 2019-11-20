@@ -1,0 +1,80 @@
+@charset "utf-8";
+* { margin: 0; padding: 0;}
+        body,html{font-family: "nsm", sans-serif;}
+        li{list-style: none;}
+        a{text-decoration: none; color: #333;}
+        .hd{ width: 100%; padding: 0px; height: 50px; background-image: url(hd_bg.jpg);}
+        .hd_wrap{margin: 0 auto; width:1200px; position: relative; }
+        .hd_wrap1 {height:50px;}
+        .hlogo{display: block; width: 130px; height: auto; float: left; padding: 3px;}
+        .input_box { float:left; width: 600px; margin-left: 50px; padding-top:  5px;}
+        .top {float: right; padding-top: 0px;}
+        .top li {float: left; margin-top: 3px; }
+        .top li a { display:block; width:50px; }
+        .logo {float: left; display: block; width: 200px;}
+
+    .gnb {
+    width:800px;
+    height:40px;
+}
+.gnb li { float:left; 
+    width: 160px; 
+    height: 40px;
+    position:relative;
+}
+.gnb li a { 
+    display:block;
+    width: 160px; 
+    height: 40px;
+    line-height:40px;
+    text-align:center; 
+    color:#333;
+    font-weight:600;
+}
+.gnb li .sub {
+    width: 160px;
+    height: 160px;
+    background:#fff;
+    position:absolute;
+    top: 40px;
+    left: 0;
+    z-index:999;
+    visibility: hidden;
+    opacity:0;
+    transition:0.5s;
+}
+.gnb li:hover .sub {
+    visibility:visible;
+    opacity: 1;
+}
+
+.gnb:hover li .sub {
+    visibility:visible;
+    opacity: 1;
+}
+.gnb li a.mm {
+    font-size:16px;     
+}
+.gnb li:hover a.mm {
+    background:#333;
+    color:#fff;
+}
+.gnb li .sub a {
+    font-size:14px;
+}
+.gnb li .sub a:hover {
+    background:#333;
+    color:#fff;
+}
+
+        #frm1 {float: left; padding-top: 14px;}
+        #sel1 {display: block; float: left width: 140px; margin-left: 15px; margin-top: 6px; line-height: 32;
+                height: 32px; border-radius:5px 0px 0px 5px ;}
+        #go_btn {display: block; float: left; width: 32px; height: 32px; line-height: 32; text-align: center; 
+                margin-top: 6px; border-left: 0; outline: 0; background: #e1e; border-radius: 0px 5px 5px 0px; }
+        #ck1:checked + #search_form {height: 200px; border-bottom: 3px solid #333;}
+        .close_btn {display: block; width: 50px; height: 50px; cursor: pointer;
+                    background-image: url(엑스사진); background-position: center center;
+                    background-repeat: no-repeat; text-indent: -9999px; position: absolute; right: 20%; top: 0;}
+        #keyword {display: block; width: 600px; height: 80px; outline: 0; border: 0; 
+                    background: rgba(0,0,0,0.5); margin-top: 50px; margin-left: 250px; float: left;}
