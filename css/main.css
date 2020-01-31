@@ -1,0 +1,112 @@
+@charset "utf-8";
+* { margin:0;	padding:0; }
+body, html { width:100%; height:100%;}
+p {color: black;}
+ul { list-style:none; 		float:left; 		margin:30px}
+#wrap { width:100%; height:100%; }
+.header { width:100%;	height:120px;  line-height:120px;	position:fixed; top:0; left:0; z-index:99; color: #fff;}
+.gnb {float: right; width: 700px; }
+.gnb li {float: left; margin-right: 20px;}
+div.page { clear:both; width:100%;	height:100%; 	position:relative; }
+.page h1 { line-height:350px; }
+div.main { background:url(../img/p1.jpg); } 
+
+/*메뉴*/
+.gnb {width: 100%; height: 60px; position: fixed; z-index: 999; background: rgba(255,255,255,0.6); box-shadow: 3px 3px 10px 1px gray; }
+.menu { margin-left: 80px; }
+.menu li {text-align: center; line-height:1px; margin-left: 20px; font-weight: bold;}
+
+
+/*about me*/
+.profile{ display: block; width: 300px; height: 150px; color: black; margin-left: 500px;}
+.education {margin-left: 500px;}
+.certificate {margin-left: 500px;}
+.sub1_box {width: 1400px; height: 800px; margin: 0 auto; padding-top: 5%; position: relative;}
+.me_png { position: absolute;}
+.flower_o { position: absolute; left: -30px; top: 65px;}
+.flower_o:hover {-webkit-animation-name: flower_ani;
+                -webkit-animation-duration: 5s;
+                animation-name: flower_ani;
+                animation-duration: 10s;
+}
+.about_p {line-height: 25px;}
+
+@keyframes flower_ani { 
+	0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+	100% {transform: rotate(360deg);}
+}
+.flower2 {position: absolute; left: 1100px; top: 580px;}
+.about_h3 {color: #7a5099; font-size: 25px; }      
+
+/*2*/
+.sub2_box {clear: both; position:  relative;width: 70%; height: 100%; }
+
+/**/
+.sub3_box {width: 1400px; height: 800px; margin: 0 auto; margin-top: 5%;}
+
+
+.main_title {color: red; position: absolute; left: 44%; top: 450px; font-size: 30px; font-weight: bold;}
+
+/*스크롤바*/
+.scroll_box { padding-top: 10px;}
+.scroll {
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+.scroll::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: scr 2s infinite;
+  animation: scr 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes scr {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes scr {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/*포폴*/

@@ -1,199 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
-* { margin:0;	padding:0; }
-body, html { width:100%; height:100%; }
-
-ul { list-style:none; 		float:left; 		margin:30px}
-div { color:white; 	text-align:center; }
-#wrap { width:100%; height:100%; }
-.header { width:100%;	height:120px;  line-height:120px;	position:fixed; top:0; left:0; z-index:99; color: #fff;}
-.gnb {float: right; width: 700px; }
-.gnb li {float: left; margin-right: 20px;}
-.footer { width:100%;	height:120px; line-height:120px; bottom:0; left:0; z-index:99; }
-div.page { clear:both; width:100%;	height:100%; 	position:relative; }
-.page h1 { line-height:350px; }
-div.main { background-color: black; } 
-div.sub1 { background: black;}
-div.sub2 { background: black; }
-div.sub3 { background: black; }
-div.sub4 { background: black; }
-div.sub5 { background: black; }
-
-#main_gnb { clear:both; width:960px; margin:0 auto; height:48px; }
-#main_gnb ul { margin:0; width:960px; }
-#main_gnb li { float:left; width:16%; }
-#main_gnb li a { display:block; line-height:48px; text-align:center;
-
-	font-size:18px; color:#fff; font-weight:bold; }
-#main_gnb li a.on { background:#fff; color:#333; }
-
-.fire_wrap {padding-top: 250px; position: relative;}
-
-.main_title {color: red; position: absolute; left: 44%; top: 450px; font-size: 30px; font-weight: bold;}
-
-/*스크롤바*/
-.scroll_box { padding-top: 10px;}
-.scroll {
-  position: fixed;
-  top: 90%;
-  left: 50%;
-  width: 30px;
-  height: 50px;
-  margin-left: -15px;
-  border: 2px solid #fff;
-  border-radius: 50px;
-  box-sizing: border-box;
-}
-.scroll::before {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  content: '';
-  width: 6px;
-  height: 6px;
-  margin-left: -3px;
-  background-color: #fff;
-  border-radius: 100%;
-  -webkit-animation: scr 2s infinite;
-  animation: scr 2s infinite;
-  box-sizing: border-box;
-}
-@-webkit-keyframes scr {
-  0% {
-    -webkit-transform: translate(0, 0);
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: translate(0, 20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes scr {
-  0% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    transform: translate(0, 20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/*테이프 애니메이션 */
-.tape {margin: 40px 0;}
-
-.tape_1{
-	-webkit-animation-name: tape1_ani;
-	-webkit-animation-duration: 5s;
-	animation-name: tape1_ani;
-	animation-duration: 5s;
-}
-@keyframes tape1_ani {
-	from {  margin-left: -200%;  }
-	to {  margin-left: 0%;  }
-}
-.tape_2{
-	-webkit-animation-name: tape2_ani;
-	-webkit-animation-duration: 5s;
-	animation-name: tape2_ani;
-	animation-duration: 5s;
-}
-@keyframes tape2_ani {
-	from {  margin-left: 100%;  }
-	to {  margin-left: 0;  }
-}
-
-.me_png{
-	-webkit-animation-name: me1_ani;
-	-webkit-animation-duration: 5s;
-	animation-name: me1_ani;
-	animation-duration: 10s;
-	animation-delay: 5s;
-	
-}
-@keyframes me1_ani { 
-	0% { margin-left: 0;     }
-	50% {transform: rotate(360deg); }
-	90% {margin-left: 100% ;}
-	100% {  margin-left: 100% ;  }
-}
-
-/*벌집 포폴*/
-.bar_wrap {  overflow-x:hidden; }    
-    #hexGrid { overflow: hidden;  width:100%;  margin: 0 auto; padding: 0.866% 0; font-family: 'Raleway', sans-serif;  font-size: 15px; margin-left: 6%; }
-    #hexGrid:after { content: "";  display: block; clear: both;  }
-    .hex { position: relative;  list-style-type: none;  float: left;
-      overflow: hidden;  visibility: hidden; outline: 1px solid transparent;  
-      transform: rotate(-60deg) skewY(30deg) translatez(-1px); }
-    .hex * { position: absolute;  visibility: visible; outline: 1px solid transparent; 
-    }
-    .hexIn { display: block; width: 100%; height: 100%;
-      text-align: center; color: #fff;  overflow: hidden;
-      transform: skewY(-30deg) rotate(60deg);
-    }
-    .hex img {  left: -100%;   right: -100%;  width: auto;  height: 100%;
-      margin: 0 auto;  }
-    .hex h1, .hex p { margin: 0; width: 102%; left: -1%;  padding: 5%;
-      box-sizing: border-box; background-color: rgba(0, 128, 128, 0.8);
-      font-weight: 300; transition: transform .2s ease-out, opacity .3s ease-out;  }
-    .hex h1 {  bottom: 50%;  padding-top: 50%; font-size: 1.5em;
-      z-index: 1;  transform: translateY(-100%) translatez(-1px); }
-    .hex h1:after { content: ''; position: absolute;
-      bottom: 0;  left: 45%;  width: 10%;  text-align: center;
-      border-bottom: 1px solid #fff; }
-    .hex p { top: 50%; padding-bottom: 50%; transform: translateY(100%) translatez(-1px);  }
-    .hexIn:hover h1, .hexIn:focus h1, .hexIn:hover p, .hexIn:focus p {
-      transform: translateY(0%) translatez(-1px);
-    }
-    .hex {  width: 21.3%;  padding-bottom:24.5%;   }
-    .hex:nth-child(7n+1), .hex:nth-child(7n+2), .hex:nth-child(7n+3) {
-    transform: translateX(50%) rotate(-60deg) skewY(30deg);
-    }
-    .hex:nth-child(7n+4), .hex:nth-child(7n+5), .hex:nth-child(7n+6), .hex:nth-child(7n+7) {
-    margin-top: -6.2%;  margin-bottom: -6.2%;   }
-    .hex:nth-child(7n+2), .hex:nth-child(7n+4), .hex:nth-child(7n+6) {  margin-right:-0.1%;
-    margin-left:-0.1%;  }
-    .hex:nth-child(7n+1) { margin-left:0;  }
-    .hex:nth-child(7n+4), .hex:nth-child(7n+1) {  clear: left;   }
-    #fork{ font-family: 'Raleway', sans-serif; position:fixed; top:0;
-      left:0; color:#000; text-decoration:none; border:1px solid #000;
-      padding:.5em .7em;  margin:1%; transition: color .5s;
-      overflow:hidden; }
-    #fork:before { content: ''; position: absolute;  top: 0; left: 0;
-      width: 130%; height: 100%;  background: #000;  z-index: -1;
-      transform-origin:0 0 ;   transform:translateX(-100%) skewX(-45deg);
-      transition: transform .5s;  }
-    #fork:hover { color: #fff;  }
-    #fork:hover:before {  transform: translateX(0) skewX(-45deg);  }
-</style>
 <meta charset="UTF-8">
 <title>포폴</title>
-<link rel="stylesheet" href="./slide.css">
+<link rel="stylesheet" href="./css/slide.css">
+<link rel="stylesheet" href="./css/main.css">
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="./slide.js"></script>
+<script type="text/javascript" src="./java/slide.js"></script>
+
 </head>
 <body>   
  <div id="wrap">
+      <nav class="gnb">
+        <ul class="menu">
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>PORTFOLIO</li>
+            <li>CONTACT</li>
+        </ul>  
+      </nav>
    <div class="page main" id="main" data-page="0">
-	   <div class="fire_wrap">
-			<img src="./fire4.gif" alt="">
-	   </div>
 	   <div class="main_title">
-		   <!--불꽃놀이 안에 글씨-->
+		   <!--메인 글씨-->
 			<h2>
 				<script>
 
@@ -201,10 +30,10 @@ div.sub5 { background: black; }
 				//visit http://www.beta-cc.de
 				//Visit http://www.dynamicdrive.com for this script 
 				
-				var message="PORTFOLIO"
-				var neonbasecolor="gray"
-				var neontextcolor="yellow"
-				var neontextcolor2="black"
+				var message="문구바꾸기"
+				var neonbasecolor="white"
+				var neontextcolor="purple"
+				var neontextcolor2="transparent"
 				var flashspeed=100      // speed of flashing in milliseconds
 				var flashingletters=3      // number of letters flashing in neontextcolor
 				var flashingletters2=1      // number of letters flashing in neontextcolor2 (0 to disable)
@@ -262,77 +91,98 @@ div.sub5 { background: black; }
 		</div>
 
    </div>
-
+   
    <!--about me-->
    <div class="page sub1" id="sub1" data-page="1">
-	   <img class="tape tape_1" src="./tape.png" alt="" >
-		<div class="sub1_wrap">
-			<div class="about">
-				<img class="me_png" src="me2.png" alt="">
+	   <div class="sub1_box">
+  		<div class="me">
+				<img class="me_png" src="./img/me.png" alt="" >
+				<img class="flower_o" src="./img/flower_o.png" alt="">
 			</div>
-		</div>
-		<img class="tape tape_2" src="./tape.png" alt="">
+			<div class="profile">
+			    <h3 class="about_h3">Profile</h3>
+				<p class="about_p">
+					장세림 <br>
+					2000.09.08 <br>
+					010.5066.5264 <br>
+					tpfladlg12@naver.com
+				</p>
+			</div>
+			<div class="education">
+				<h3 class="about_h3">Education</h3>
+				<p class="about_p">
+					2019.02 <br>
+					대전유성여자고등학교_졸업 <br><br>
+					2019.09 ~ 2020.02 <br>
+					그린아트컴퓨터학원 <br>
+					스마트웹&콘텐츠서비스개발(800h)_수료예정
+				</p>
+			</div>
+			<div class="certificate">
+				<h3 class="about_h3">Certificate</h3>
+				<p class="about_p">
+					GTQ 2급 <br>
+					ITQ 한글 파워포인트 엑셀
+				</p>
+
+			</div>
+            <div class="skill">
+                <h3 class="about_h3">Skill</h3>
+                <img src="" alt="">                    
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+           <div class="flower2">
+                <img src="./img/flower.png" alt="">
+            </div>
+        </div>
    </div>
-   <div class="page sub2" id="sub2" data-page="2">
-		<div class="">
-			<div class="bar_wrap">
-				<ul id="hexGrid">
-				  <li class="hex">
-					<a class="hexIn" href="#">
-					  <img src="https://placehold.it/252x187/FF0066" alt="" />
-					  <h1></h1>
-					  <p></p>
-					</a>
-				  </li>
-				  <li class="hex">
-					<a class="hexIn" href="#">
-					  <img src="https://placehold.it/252x187/0099FF" alt="" />
-					  <h1></h1>
-					  <p></p>
-					</a>
-				  </li>
-				  <li class="hex">
-					<a class="hexIn" href="#">
-					  <img src="https://placehold.it/252x187/006666" alt="" />
-					  <h1></h1>
-					  <p></p>
-					</a>
-				  </li>
-				  <li class="hex">
-					<a class="hexIn" href="#">
-					  <img src="https://placehold.it/252x187/33CC33" alt="" />
-					  <h1></h1>
-					  <p></p>
-					</a>
-				  </li>
-				  <li class="hex">
-					<a class="hexIn" href="#">
-					  <img src="https://placehold.it/252x187/6666FF" alt="" />
-					  <h1></h1>
-					  <p></p>
-					</a>
-				  </li>
-				  <li class="hex">
-					<a class="hexIn" href="#">
-					  <img src="https://placehold.it/252x187/666600" alt="" />
-					  <h1></h1>
-					  <p></p>
-					</a>
-				  </li>
-				</ul>
-			</div>	
-		</div>
-   </div>
+   <!---->
+   
+   
+<div class="page sub2" id="sub2" data-page="2">
+  <ul id="portfolio">
+    <li class="item1">
+      <img src="./img/com.png">
+    </li>
+    <li class="item2">
+      <img src="./img/com.png">
+    </li>
+    <li class="item3">
+      <img src="./img/com.png">
+    </li>
+    <li class="item4">
+      <img src="./img/com.png">
+    </li>
+    <li class="item5">
+     <img src="./img/com.png">
+     </li>
+  </ul>
+
+  <div id="port-btn">
+    <button class="preview"></button>
+    <button class="next"></button>
+  </div>
+</div>
+   
+   
+   
+   
+   
+   <!---->
    <div class="page sub3" id="sub3" data-page="3">
-	
+       <div class="sub3_box">
+           
+       </div>
    </div>
+   <!---->
    <div class="page sub4" id="sub4" data-page="4">
 
    </div>
-</div>   
-<div class="footer">
-	<h1>여기는 푸터입니다</h1>
 </div>
+
+<!--스크롤-->
 <section id="quick">
 	<a class="pageMove on" data-val="0">
 	    <span class="qtxt"></span>
@@ -355,8 +205,7 @@ div.sub5 { background: black; }
 	    <span class="qbtn"></span>
 	</a>
 </section>
-<button id="quick_up" class="scrollBtn">▲</button>
-<button id="quick_down" class="scrollBtn">▼</button>
+
 <div class="scroll_box">
 	<span class="scroll"></span>
 </div>
