@@ -1,0 +1,13 @@
+@charset "utf-8";
+main {width: 100vw; padding-top: 60px;}
+
+.room_tit h2{margin-top: 15px; text-align: center; text-shadow: 2px 3px 3px gray;  font-size: 25px; color: #c84a61;}
+.room_tit h1 {text-align: center;}
+.room_tit h3 {font-size: 14px; text-align: center;}
+
+
+.room_box {width: 100%; margin-top: 30px;}
+.sweet_con li {width: 100%; background-repeat: no-repeat;background-size: cover; }
+.sweet {width: 100%;}
+
+.room_box img {width: 100%; display: block;}

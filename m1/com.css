@@ -1,0 +1,40 @@
+@charset "utf-8";
+* { margin: 0; padding: 0; }  
+    body, html { width: 100%; font-family: 'Noto Sans KR', sans-serif; }
+    ul { list-style: none; }
+    a { text-decoration: none; }        
+    button, label, input { outline:0; border:0; background-color:transparent; } button, label, input, a { user-select:none; } 
+    
+    .none_item { display:none; }    
+     #hd { position:fixed; left: 0; top: 0; z-index:900; width:100vw; height: 60px; overflow:hidden; background-color:#282828; border-bottom:1px solid #111; }   
+
+    .logo { display:block; width: 160px; height: 60px; margin-left: 1vh; background: url(./logo.png);background-repeat: no-repeat;}
+
+    .lst_btn { display:block; width: 60px; height: 60px; cursor:pointer; background-color:#282828; position:absolute; right:0; top:0; }
+    .lst_btn span { display:block; }
+    .line_box { width: 60px; height: 60px; position:relative; cursor:pointer; }
+    .line_box span { position:absolute; width: 30px; height:3px; left: 15px; background-color:#fff; } 
+    .line_box span.ln1 { top:18px; }    
+    .line_box span.ln2 { top:28px; }        
+    .line_box span.ln3 { top:38px; } 
+    
+
+
+    #ck1:checked ~ #hd .line_box span.ln1 { transform:rotate(45deg); top:28px; }
+    #ck1:checked ~ #hd .line_box span.ln2 { opacity:0; }    
+    #ck1:checked ~ #hd .line_box span.ln3 { transform:rotate(-45deg); top:28px; }    
+    #gnb { width: 250px; height:100vh; position:fixed; left:-250px; top: 0; transition:0.6s; background: rgba(0,0,0,0.5); overflow:hidden; z-index:910; }
+
+    #ck1:checked ~ #gnb { left:0; } 
+
+    .yoback {height: 60px;}    
+    .thumb_menu { clear:both; }    
+    .thumb_menu li { float:left; }    
+    .thumb_menu li a, .thumb_menu li label { display:block; width: 50px; height: 50px; line-height: 50px; text-align:center; color:#fff; }    
+    .menu { clear:both; }
+    .menu li { clear:both; }    
+    .menu li a { display:block; line-height: 52px; height: 52px; border-top:1px solid #555; border-bottom:1px solid #111; text-indent:14px; color:#fff; }    
+        
+    #search, #login { width: 100vw; height: 100vh; position:fixed; top:-100vh; left: 0; background:#333; color:#fff; font-size:18px; text-align:center; z-index:920; transition:0.6s; }
+    #ck2:checked ~ #search { top: 0; }    
+    #ck3:checked ~ #login { top: 0; }
