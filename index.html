@@ -5,9 +5,11 @@
 <title>포폴</title>
 <link rel="stylesheet" href="./css/slide.css">
 <link rel="stylesheet" href="./css/main.css">
-
+<link rel="stylesheet" type="text/css" href="./css/bookblock.css" />
+<link rel="stylesheet" type="text/css" href="./css/demo1.css" />
+<script src="./js/modernizr.custom.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="./java/slide.js"></script>
+<script type="text/javascript" src="./js/slide.js"></script>
 
 </head>
 <body>   
@@ -195,78 +197,189 @@
    
    
 <div class="page sub2" id="sub2" data-page="3">
-    <ul class="img_box">
-        <li class="item1">
-           <img class="com" src="./img/com_1.png" alt="">
-            <div class="bg_box">
-                <h2 class="vs_tit">대구지방조달청</h2>
-                <p class="vs_com"></p>
+    <div class="container">
+        <div class="port clearfix">
+            <div class="bb-custom-wrapper">
+                <div id="bb-bookblock" class="bb-bookblock">
+                    <div class="bb-item">
+                        <a href="#"><img src="img/port1.jpg" alt="image01"/></a>
+                    </div>
+                    <div class="bb-item">
+                        <a href="#"><img src="img/port2.jpg" alt="image02"/></a>
+                    </div>
+                    <div class="bb-item">
+                        <a href="#"><img src="img/port3.jpg" alt="image03"/></a>
+                    </div>
+                    <div class="bb-item">
+                        <a href="#"><img src="img/port4.jpg" alt="image04"/></a>
+                    </div>
+                    <div class="bb-item">
+                        <a href="#"><img src="img/port5.jpg" alt="image05"/></a>
+                    </div>
+                </div>
+                <nav>
+                    <a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left"><img src="./img/prev_btn.png" alt=""></a>
+                    <a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right"><img src="./img/next_btn.png" alt=""></a>
+                </nav>
+                <div class="port_tit">
+                    <h3>대구지방조달청</h3>
+                    <h3>한신포차</h3>
+                    <h3>그랜드 하얏트 서울</h3>
+                    <h3>파워에이드</h3>
+                    <h3></h3>
+                </div>
             </div>
-        </li>
-        <li class="item2">
-           <img class="com" src="./img/com.png" alt="">
-            <div class="bg_box">
-                <h2 class="vs_tit">eeeeee</h2>
-                <p class="vs_com"></p>
-            </div>
-        </li>
-        <li class="item3">
-           <img class="com" src="./img/com.png" alt="">
-            <div class="bg_box">
-                <h2 class="vs_tit">ffffff</h2>
-                <p class="vs_com"></p>
-            </div>
-        </li>
-        <li class="item4">
-           <img class="com" src="./img/com.png" alt="">
-            <div class="bg_box">
-                <h2 class="vs_tit">hhhhhh</h2>
-                <p class="vs_com"></p>
-            </div>
-        </li>
-        <li class="item5">
-           <img class="com" src="./img/com.png" alt="">
-            <div class="bg_box">
-                <h2 class="vs_tit">qqqqqq</h2>
-                <p class="vs_com"></p>
-            </div>
-        </li>
-    </ul>
-    <ul class="btn_box">
-        <li class="prev_btn"><button></button></li>
-        <li class="next_btn"><button></button></li>
-    </ul>
+        </div>
+    </div><!-- /container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquerypp.custom.js"></script>
+    <script src="js/jquery.bookblock.js"></script>
+    <!--책페이지-->
     <script>
-    $(document).ready(function(){
-        var len = $(".img_box li").length;
-        function frAni() {
-            $(".img_box").not(":animated").animate({"margin-left":"-100%"}, 800, function(){
-                $(".img_box li").eq(0).appendTo($(".img_box"));
-                $(".img_box").css("margin-left","0px");
-                $(".num_box li button").removeClass("on");
-                $(".num_box li").eq(0).find("button").addClass("on");
-            });
-        }
-        function bkAni() {
-            $(".img_box li").eq(len-1).prependTo($(".img_box"));
-            $(".img_box").css("margin-left", "-100%");
-            $(".img_box").not(":animated").animate({"margin-left":"0px"}, 800);
-            $(".num_box li button").removeClass("on");
-            $(".num_box li").eq(0).find("button").addClass("on");
-        }
-        //var intv1 = setInterval(function(){ frAni(); }, 2900);
-        $(".btn_box .prev_btn").click(function(){
-            //clearInterval(intv1);
-            bkAni();
-            //intv1 = setInterval(function(){ frAni(); }, 2900);
-        });
-        $(".btn_box .next_btn").click(function(){
-            //clearInterval(intv1);
-            frAni();
-            //intv1 = setInterval(function(){ frAni(); }, 2900);
-        });
-    });
+        var Page = (function() {
+            
+            var config = {
+                    $bookBlock : $( '#bb-bookblock' ),
+                    $navNext : $( '#bb-nav-next' ),
+                    $navPrev : $( '#bb-nav-prev' ),
+                    $navFirst : $( '#bb-nav-first' ),
+                    $navLast : $( '#bb-nav-last' )
+                },
+                init = function() {
+                    config.$bookBlock.bookblock( {
+                        speed : 800,
+                        shadowSides : 0.8,
+                        shadowFlip : 0.7
+                    } );
+                    initEvents();
+                },
+                initEvents = function() {
+                    
+                    var $slides = config.$bookBlock.children();
+
+                    // add navigation events
+                    config.$navNext.on( 'click touchstart', function() {
+                        config.$bookBlock.bookblock( 'next' );
+                        return false;
+                    } );
+
+                    config.$navPrev.on( 'click touchstart', function() {
+                        config.$bookBlock.bookblock( 'prev' );
+                        return false;
+                    } );
+
+                    config.$navFirst.on( 'click touchstart', function() {
+                        config.$bookBlock.bookblock( 'first' );
+            
+                    } );
+
+                    config.$navLast.on( 'click touchstart', function() {
+                        config.$bookBlock.bookblock( 'last' );
+                        return false;
+                    } );
+                    
+                    // add swipe events
+                    $slides.on( {
+                        'swipeleft' : function( event ) {
+                            config.$bookBlock.bookblock( 'next' );
+                            return false;
+                        },
+                        'swiperight' : function( event ) {
+                            config.$bookBlock.bookblock( 'prev' );
+                            return false;
+                        }
+                    } );
+
+                    // add keyboard events
+                    $( document ).keydown( function(e) {
+                        var keyCode = e.keyCode || e.which,
+                            arrow = {
+                                left : 37,
+                                up : 38,
+                                right : 39,
+                                down : 40
+                            };
+
+                        switch (keyCode) {
+                            case arrow.left:
+                                config.$bookBlock.bookblock( 'prev' );
+                                break;
+                            case arrow.right:
+                                config.$bookBlock.bookblock( 'next' );
+                                break;
+                        }
+                    } );
+                };
+
+                return { init : init };
+
+        })();
     </script>
+    <script>
+            Page.init();
+    </script>
+    
+    <!--h3_tit-->
+    <script>
+        $(document).ready(function(){
+          function nextAni(){
+                  $(".port_tit li").eq(0).appendTo($(".port_tit"));
+                  $(".port_tit").css("margin-top","-27px");
+          }
+          function prevAni() {
+              $(".port_tit li").eq(4).prependTo($(".port_tit"));
+              $(".port_tit").css("margin-top", "27px");
+          }
+          var intv = setInterval(function(){ nextAni(); }, 2900);
+          $("nav #bb-nav-next").click(function(){
+             clearInterval(intv);
+             nextAni(); 
+             intv = setInterval(function(){  nextAni(); }, 2900);  
+          });
+          $("nav #bb-nav-prev").click(function(){
+              clearInterval(intv);
+              prevAni();
+              intv = setInterval(function(){ nextAni(); }, 2900);
+          });
+    });
+        
+    </script>
+    
+    <div class="port_p">
+        <ul class="port_color">
+            <li class="p1_c1"></li>
+            <li class="p1_c2"></li>
+            <li class="p1_c3"></li>
+        </ul>
+        <div class="port_txt">
+            <h3>데스크탑</h3>
+            <p>- 그누보드5를 사용하여 제작하였습니다.</p>
+            <p>- 메인화면애 자주사용하는 메뉴를 넣어 편리성을 더했습니다.</p>
+            <p>- 지방청사이트의 대표색감을 생각하여 주로 푸른계열로 색상을 사용했습니다.</p>
+            
+        </div>
+        <div class="port_txt">
+            <h3>데스크탑</h3>
+            <p>- 그누보드5를 사용하여 제작하였습니다.</p>
+            <p>- 메인화면애 자주사용하는 메뉴를 넣어 편리성을 더했습니다.</p>
+            <p>- 지방청사이트의 대표색감을 생각하여 주로 푸른계열로 색상을 사용했습니다.</p>
+            
+        </div>
+        <div class="port_txt">
+            <h3>데스크탑</h3>
+            <p>- 그누보드5를 사용하여 제작하였습니다.</p>
+            <p>- 메인화면애 자주사용하는 메뉴를 넣어 편리성을 더했습니다.</p>
+            <p>- 지방청사이트의 대표색감을 생각하여 주로 푸른계열로 색상을 사용했습니다.</p>
+            
+        </div>
+        <div class="port_txt">
+            <h3>데스크탑</h3>
+            <p>- 그누보드5를 사용하여 제작하였습니다.</p>
+            <p>- 메인화면애 자주사용하는 메뉴를 넣어 편리성을 더했습니다.</p>
+            <p>- 지방청사이트의 대표색감을 생각하여 주로 푸른계열로 색상을 사용했습니다.</p>
+            
+        </div>
+    </div>
 </div>  
    
    <!---->
