@@ -144,7 +144,7 @@ div.main { background:url(../img/p1.jpg); }
 
 #sub2 {height: 100%; width: 100%; overflow: hidden;}
 .bb-custom-wrapper nav{position: relative;}
-.port_tit {position: absolute; top: 390px; left: 50px; width: 600px; height: 27px;}
+.port_tit {position: absolute; top: 390px; left: 50px; width: 600px; height: 27px; overflow: hidden;}
 .port_tit h3{font-size: 20px; text-align: center;}
 
 /*뎀1*/
@@ -217,11 +217,15 @@ div.main { background:url(../img/p1.jpg); }
 
 .port_color .p1_c1 {background-color: blue}
 .port_color .p1_c2 {background-color: deepskyblue}
+
 .port_color .p1_c3 {background-color: skyblue}
 
-.port_txt h3 {margin-bottom: 20px;}
-.port_txt p {line-height: 30px;}
+.port_txt h2 {color:#7a5099; margin-bottom: 20px; margin-top: 20px;}
+.port_txt h3 {margin-bottom: 30px;}
+.port_txt p {line-height: 30px; margin-top:}
 
+.port_p_box {width: 4000px;}
+.port_p_box li {float: left; width: 800px;}
 
 
 
